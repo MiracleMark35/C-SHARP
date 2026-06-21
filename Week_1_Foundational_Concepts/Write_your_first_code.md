@@ -244,3 +244,25 @@ To declare a new array of strings that can hold three elements, enter the follow
 ```csharp
 string[] fraudulentOrderIDs = new string[3];
 ```
+
+
+# Looping through an array using foreach
+
+```csharp
+string[] kabaw = { "Rowena", "Robin", "Bao" };
+foreach (string baka in kabaw)
+{
+    Console.WriteLine(baka);
+}
+```
+```csharp
+string [] codes = { "B123" ,"C234","A345","C15" ,"B177" ,"G3003" ,"C235" ,"B179"};
+
+foreach( string item in codes)
+{
+    if (item.StartsWith("B"))
+    {
+        Console.WriteLine(item);
+    }
+}
+```

@@ -1,23 +1,9 @@
-Random random = new Random();
-int daysUntilExpiration = random.Next(12);
-int discountPercentage = 0;
+string [] codes = { "B123" ,"C234","A345","C15" ,"B177" ,"G3003" ,"C235" ,"B179"};
 
-if(daysUntilExpiration <= 10 && daysUntilExpiration > 5)
+foreach( string item in codes)
 {
-    Console.WriteLine("Your subscription will expire soon. Renew now!");
-}else if (daysUntilExpiration <= 5 && daysUntilExpiration > 1)
-{
-      discountPercentage = 10;
-    Console.WriteLine($"Your subscription expires in {daysUntilExpiration} days.");
-}else if (daysUntilExpiration == 1)
-{   
-    discountPercentage = 20;
-    Console.WriteLine($"Your subscription expires within a day!");
-}else if(daysUntilExpiration == 0)
-{
-    Console.WriteLine("Your subscription has expired.");
-}
-if (discountPercentage > 0)
-{
-    Console.WriteLine($"Renew now and save {discountPercentage}%!");
+    if (item.StartsWith("B"))
+    {
+        Console.WriteLine(item);
+    }
 }
