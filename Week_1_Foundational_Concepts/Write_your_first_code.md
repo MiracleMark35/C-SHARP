@@ -231,3 +231,16 @@ Think of overloading as giving the same method multiple ways to be called.
 # What is a code block?
 
 A code block is a collection of one or more lines of code that are defined by an opening and closing curly brace symbol { }.
+
+
+# Array
+
+Arrays can be used to store multiple values of the same type in a single variable.
+
+# Declare a new array
+
+To declare a new array of strings that can hold three elements, enter the following code:
+
+```csharp
+string[] fraudulentOrderIDs = new string[3];
+```
