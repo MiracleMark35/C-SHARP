@@ -1,3 +1,7 @@
+# If Else With For Each
+# Student Grade Calculator
+
+```csharp
 // initialize variables - graded assignments 
 int currentAssignments = 5;
 
@@ -91,11 +95,6 @@ else
     }
 
     Console.WriteLine($"{currentStudent}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}");
-
-   
 }
 
-
-
-Console.WriteLine("Press the Enter key to continue");
-// Console.ReadLine();
+```
