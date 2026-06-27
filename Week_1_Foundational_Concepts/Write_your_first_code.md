@@ -266,3 +266,71 @@ foreach( string item in codes)
     }
 }
 ```
+
+# Manage user input during this challenge
+
+```csharp
+string? readResult;
+bool validEntry = false;
+Console.WriteLine("Enter a string containing at least three characters:");
+do
+{
+    readResult = Console.ReadLine();
+    if (readResult != null)
+    {
+        if (readResult.Length >= 3)
+        {
+            validEntry = true;
+        }
+        else
+        {
+            Console.WriteLine("Your input is invalid, please try again.");
+        }
+    }
+} while (validEntry == false);
+```
+# Exercise
+```csharp
+string? readResult;
+int numericValue = 0;
+bool validNumber = false;
+
+// Requirement: Prompt before the iteration block
+Console.WriteLine("Enter an integer value between 5 and 10");
+
+// Requirement: Must use a do-while or while iteration
+do
+{
+    // Requirement: Use Console.ReadLine() inside the block
+    readResult = Console.ReadLine();
+    
+    if (readResult != null)
+    {
+        // Requirement: Ensure input is a valid integer
+        validNumber = int.TryParse(readResult, out numericValue);
+        
+        if (validNumber)
+        {
+            if (numericValue >= 5 && numericValue <= 10)
+            {
+                validNumber = true;
+            }
+            else
+            {
+                // Requirement: Prompt again if not between 5 and 10
+                validNumber = false;  
+                Console.WriteLine($"You entered {numericValue}. Please enter a number between 5 and 10.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Sorry, you entered an invalid number, please try again.");
+        }
+    }
+// Requirement: Ensure value is between 5 and 10 before exiting
+} while (validNumber == false);
+
+// Requirement: Inform user *after* the iteration block
+Console.WriteLine($"Your input value ({numericValue}) has been accepted.");
+
+```
