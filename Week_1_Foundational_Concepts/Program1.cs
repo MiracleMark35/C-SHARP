@@ -72,7 +72,7 @@ for (int i = 0; i < maxPets; i++)
 }
 
 // display the top-level menu options
-
+do{
 Console.Clear();
 
 Console.WriteLine("Welcome to the Contoso PetFriends app. Your main menu options are:");
@@ -93,8 +93,84 @@ if (readResult != null)
     menuSelection = readResult.ToLower();
 }
 
-Console.WriteLine($"You selected menu option {menuSelection}.");
-Console.WriteLine("Press the Enter key to continue");
+    // Console.WriteLine($"You selected menu option {menuSelection}.");
+    // Console.WriteLine("Press the Enter key to continue");
 
-// pause code execution
+    // pause code execution
+    // readResult = Console.ReadLine();
+
+  switch(menuSelection)
+{
+    case "1":
+    // List all of our current pet information
+    for (int i = 0; i < maxPets; i++)
+{
+    if (ourAnimals[i, 0] != "ID #: ")
+    {
+        Console.WriteLine();
+        for (int j = 0; j < 6; j++)
+        {
+            Console.WriteLine(ourAnimals[i, j]);
+        }
+    }
+}   
+        Console.WriteLine("\nPress the Enter key to continue.");
+    readResult = Console.ReadLine();
+    break;
+
+
+    case "2":
+    for (int i = 0; i < maxPets; i++)
+{
+    if (ourAnimals[i, 0] == "ID #: ")
+    {
+        for (int j = 0; j < 6; j++)
+        {   
+            readResult = Console.ReadLine();
+
+            Console.WriteLine(ourAnimals[i, j]);
+        }
+    }
+}   
+    break;
+
+    case "3":
+    Console.WriteLine("Challenge Project - please check back soon to see progress.");
+Console.WriteLine("Press the Enter key to continue.");
 readResult = Console.ReadLine();
+        break;
+
+    case "4":
+    Console.WriteLine("Challenge Project - please check back soon to see progress.");
+Console.WriteLine("Press the Enter key to continue.");
+readResult = Console.ReadLine();
+        break;
+
+    case "5":
+    Console.WriteLine("UNDER CONSTRUCTION - please check back next month to see progress.");
+Console.WriteLine("Press the Enter key to continue.");
+readResult = Console.ReadLine();
+        break;
+
+    case "6":
+    Console.WriteLine("UNDER CONSTRUCTION - please check back next month to see progress.");
+Console.WriteLine("Press the Enter key to continue.");
+readResult = Console.ReadLine();
+        break;
+
+    case "7":
+    Console.WriteLine("UNDER CONSTRUCTION - please check back next month to see progress.");
+Console.WriteLine("Press the Enter key to continue.");
+readResult = Console.ReadLine();
+        break;
+
+    case "8":
+    Console.WriteLine("UNDER CONSTRUCTION - please check back next month to see progress.");
+Console.WriteLine("Press the Enter key to continue.");
+readResult = Console.ReadLine();
+        break;
+    default:
+    
+        break;
+}
+}while(menuSelection != "exit");
