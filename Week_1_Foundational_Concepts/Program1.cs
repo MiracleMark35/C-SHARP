@@ -1,4 +1,6 @@
-﻿int first = 5;
-int second = 7;
-string message = first.ToString() + second.ToString();
-Console.WriteLine(message);
+﻿decimal value1 = 0m;
+string message = "4.21312";
+
+
+Console.WriteLine(decimal.TryParse(message ,out value1));
+Console.WriteLine(value1);
