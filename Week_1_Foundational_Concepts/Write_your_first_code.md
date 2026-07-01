@@ -334,3 +334,21 @@ do
 Console.WriteLine($"Your input value ({numericValue}) has been accepted.");
 
 ```
+
+# How To CHoose The Right Data Type
+
+int for most whole numbers
+
+decimal for numbers representing money
+
+bool for true or false values
+
+string for alphanumeric value
+
+byte: working with encoded data that comes from other computer systems or using different character sets.
+
+double: working with geometric or scientific purposes. double is used frequently when building games involving motion.
+
+System.DateTime for a specific date and time value.
+
+System.TimeSpan for a span of years / months / days / hours / minutes / seconds / milliseconds.
