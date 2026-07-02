@@ -46,7 +46,6 @@ Console.WriteLine($"Price: {price:C} (Save {discount:C})");
 // Output
 Price: ₱123.45 (Save ₱50.00)
 ```
-![alt text](image.png)
 
 # Format
 
